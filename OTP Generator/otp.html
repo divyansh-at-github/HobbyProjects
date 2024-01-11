@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Generator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(171, 248, 248);
+            gap: 1rem;
+        }
+        .btn{
+            padding: 2rem 2rem;
+            background-color: rgba(217, 217, 18, 0.767);
+            border-radius: 2rem;
+            border: none;
+           
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: rgba(229, 229, 26, 0.767);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="otp-btn btn">Generate OTP</button>
+        <button class="resend-btn btn">Resend OTP</button>
+        <p class="generated-otp"></p>
+    </div>
+    <script>
+        function generateOtp(){
+        const max=100000
+        const min=999999
+        let otp=Math.floor(Math.random() * (max-min +1))+min
+        const p=document.querySelector('.generated-otp')
+        p.innerHTML=`${otp}`
+        document.body.appendChild('p');
+        
+
+    }
+    document.querySelector('.otp-btn').addEventListener('click',generateOtp)
+    document.querySelector('.resend-btn').addEventListener('click',generateOtp)
+        
+        
+
+    </script>
+</body>
+</html>
