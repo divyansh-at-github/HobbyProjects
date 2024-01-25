@@ -380,7 +380,7 @@ body,html{
     display: flex;
     justify-content: space-between;
 }
-.left{
+.service-left{
     display: flex;
     flex-direction: column;
     width: 45%;
@@ -389,7 +389,7 @@ body,html{
     position: relative;
     z-index: 9;
 }
-.right{
+.service-right{
     width: 60%;
     background-image: url(assets/asset\ 9.webp);
     background-color: black;
